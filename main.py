@@ -4,4 +4,4 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-app.mount
+app.mount("/", StaticFiles(directory='static', html=True), name='static')
